@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends "test_app_temp/base.html" %}
+  {% block body_block %}
+     <div class="jumbotron">
+      <h1> Please fill out the form below !!!</h1>
+      <form  method="POST">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="Submit">
+
+      </form>
+      <h2> Please <a href="{% url "index" %}">  click here</a> to get back to Index</h2>
+     </div>
+  {% endblock %}

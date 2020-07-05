@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+  {% block body_block %}
+  <h1>Registration form: </h1>
+  <h3>Please fill in the below details</h3>
+  <div class="jumbotron">
+    <form enctype="multipart/form-data" method="POST">
+      {{ user_form.as_p }}
+      {{ userinfo_form.as_p }}
+      {% csrf_token %}
+      <input type="submit" class="btn btn-primary" value="Register">
+    </form>
+    <h3> Please <a href="{% url 'index' %}">  click here</a> to get back to Index</h3>
+  </div>
+  {% endblock %}

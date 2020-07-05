@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+  {% block body_block %}
+    <h2> Here are your Users list </h2>
+    <div class='DjangoUser'>
+      {% if userbase %}
+      <ol>
+       {% for ls in userbase %}
+          <li> User Info</li>
+            <ul>
+              <li> Name : {{ls.name}} </li>
+              <li> Text : {{ls.text}} </li>
+              <li> email : {{ls.email}} </li>
+            </ul>
+       {% endfor %}
+       </ol>
+      {% else %}
+        <p> NO RECORDS FOUND</p>
+      {% endif %}
+    </div>
+    <h3> Please <a href="{% url 'index' %}">  click here</a> to get back to Index</h3>
+{% endblock %}

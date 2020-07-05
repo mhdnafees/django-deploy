@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+  {% block body_block %}
+    <h1> Welcome!!!!</h1>
+    <h4> Please go to /users to view the users list or <a href="{% url 'tapp:users' %}"> click here </a> </h4>
+    <h4> Please go to /admin to enter admin page or <a href="{% url 'admin:index' %}"> click here </a> </h4>
+    <h4> Please go to /formpage to view the form for notify or <a href="{% url 'tapp:formpage' %}"> click here </a> </h4>
+  {% endblock %}
